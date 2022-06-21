@@ -8,16 +8,14 @@ const App = () => {
     <div className="app">
       <div className="left-scene">
         <input className="form-search" />
-        <div className="selected-gif">
-        THE SELECTED GIF HERE
-        </div>
+        <div className="selected-gif">THE SELECTED GIF HERE</div>
       </div>
 
       <div className="right-scene">
-        <GifList />
+        <GifList searchText="pokemon" />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default App;

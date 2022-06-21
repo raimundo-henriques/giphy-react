@@ -1,6 +1,9 @@
 import './App.css';
+import Gif from './Gif';
+import GifList from './GifList';
+import Search from './Search';
 
-function App() {
+const App = () => {
   return (
     <div className="app">
       <div className="left-scene">
@@ -11,7 +14,7 @@ function App() {
       </div>
 
       <div className="right-scene">
-        THE SIDEBAR GIF LIST HERE
+        <GifList />
       </div>
     </div>
   )

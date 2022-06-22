@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Gif from './Gif';
 import GifList from './GifList';

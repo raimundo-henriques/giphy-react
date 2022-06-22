@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     giphy(process.env.REACT_APP_GIPHY_API).search(
       {
-        q: {searchText},
+        q: searchText,
         rating: 'g',
         limit: 10,
       },
@@ -26,14 +26,12 @@ const App = () => {
     setSelected(id);
   }
 
-  const handleSearch = (text) => {
-    setSearchText(text);
-  }
+
 
   return (
     <div className="app">
       <div className="left-scene">
-        <Search onSearch={handleSearch}/>
+        <Search onSearch={setSearchText}/>
         <div className="selected-gif">
           <Gif id={selectedId}/>
         </div>
@@ -42,7 +40,6 @@ const App = () => {
       <div className="right-scene">
         <div className="gif-list">
           {data.map((gif) => {
-            console.log(gif);
             return <Gif
                     key={gif.id}
                     id={gif.id}

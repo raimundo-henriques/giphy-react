@@ -7,11 +7,12 @@ import Search from './Search';
 const App = () => {
   const [data, setData] = useState([]);
   const [selectedId, setSelected] = useState();
+  const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     giphy(process.env.REACT_APP_GIPHY_API).search(
       {
-        q: "pokemon",
+        q: {searchText},
         rating: 'g',
         limit: 10,
       },

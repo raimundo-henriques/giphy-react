@@ -1,8 +1,7 @@
-import giphy from 'giphy-api';
+const Gif = ({ id }) => {
+  const url = `https://media2.giphy.com/media/${id}/200w.webp`;
 
-const Gif = () => {
-  console.log("Am I even connecting?");
-
+  return <img src={url} alt="Giphy square" />;
 };
 
 export default Gif;

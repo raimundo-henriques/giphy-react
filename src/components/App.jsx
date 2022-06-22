@@ -20,16 +20,20 @@ const App = () => {
         setData(res.data);
       },
     );
-  }, []);
+  }, [searchText]);
 
   const handleSelect = ({id}) => {
     setSelected(id);
   }
 
+  const handleSearch = (text) => {
+    setSearchText(text);
+  }
+
   return (
     <div className="app">
       <div className="left-scene">
-        <input className="form-search" />
+        <Search onSearch={handleSearch}/>
         <div className="selected-gif">
           <Gif id={selectedId}/>
         </div>

@@ -6,8 +6,8 @@ import Search from './Search';
 
 const App = () => {
   const [data, setData] = useState([]);
-  const [selectedId, setSelected] = useState();
-  const [searchText, setSearchText] = useState('');
+  const [selectedId, setSelected] = useState("lRLH2KwSgJDjjWbNXu");
+  const [searchText, setSearchText] = useState('gifs');
 
   useEffect(() => {
     giphy(process.env.REACT_APP_GIPHY_API).search(
@@ -26,13 +26,12 @@ const App = () => {
     setSelected(id);
   }
 
-
-
   return (
     <div className="app">
       <div className="left-scene">
         <Search onSearch={setSearchText}/>
         <div className="selected-gif">
+
           <Gif id={selectedId}/>
         </div>
       </div>
